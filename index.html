@@ -1,10 +1,47 @@
 <html>
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            user-select: none;
+            -moz-user-select: none;
+            text-align:center;
+        }
+        .container {
+            display: inline-block;
+            width: 700px;
+            vertical-align: top;
+            text-align: justify;
+        }
+        .something div.box {
+            margin: 10px;
+        }
+        .text {
+            text-align: justify;
+        }
+        .box {
+            margin: 0 10px;
+        }
+    </style>
     <script defer src="script.js"></script>
 </head>
 <body>
-<div id="copyText" contenteditable="true">Copy this text</div>
-<button id="copyButton">Copy</button>
-<div contenteditable="true">Paste it here</div>
+<h1>Life with Sports</h1>
+<div style="border: 1px solid black" class="container">
+    <h2>Liverpool</h2>
+    <div class="box" style="float: right; width:340px; height:340px;">
+        <img id="zoomy1" width="340" src="https://i2-prod.liverpoolecho.co.uk/incoming/article27424491.ece/ALTERNATES/s1200c/0_GettyImages-1580638036.jpg" alt=""/>
+    </div>
+    <p contentEditable="true" id="copyText" class="text">
+        Chaos in the first half, chaos in the second half. Chaos in the Liverpool defence and chaos in the Newcastle defence. Chaos in Trent Alexander-Arnold’s mind, in Virgil van Dijk’s mind, perhaps in the referee’s mind. Chaos so thoroughly chaotic that it rendered the most chaotic Premier League player of all into a clanking totem of clinically icy finishing. Football is a sport we try to rationalise. We try to explain it with data and diagrams. We try to reduce the random by having referees’ decisions checked in slow motion and by endlessly rewriting the laws. But sometimes the random just bubbles over. Sometimes the chaos cannot be contained. And that is what, despite the dirty money and the dirtier money, despite the public investment funds and the private equity, despite the conspiracy theorists and tribal bores, makes football still worth it
+        In 1928, the great editor of El Gráfico, Borocotó, proposed raising a statue to the spirit of Argentinian dribbling and ended up prophesying Diego Maradona, 32 years before he was born. Raise a statue to the spirit of the modern Premier League as it is and you would end up with sacks of cash, barrels of oil, social media fury, a cattle prod and a bonesaw. Raise a statue to what it should be and it might look something like Darwin Núñez.
+        No one knows if he is any good. No one knows at any moment, whether he is about to lash a shot into the top corner or trip over. No one knows if he was £85m well spent or a waste who exemplifies Liverpool’s lack of direction after a series of resignations from their once-vaunted transfer committee. And that’s the beauty of it. Football keeps on reminding us that it is a game best enjoyed when no one has a clue about anything.
+    </p>
+    <button id="copyButton">Copy</button>
+</div>
+<div id="pasteDiv" contentEditable="true" style="border: 1px solid black; height: 600px" class="container">
+    <p contentEditable="true" id="pasteText" data-text="Paste text here"></p>
+</div>
 </body>
 </html>
